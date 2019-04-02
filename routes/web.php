@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('admin/login', 'Cms\AdminController@showloginForm')->name('admin.login');
+
+Route::post('admin/login', 'Cms\AdminController@login')->name('admin.loginpost');

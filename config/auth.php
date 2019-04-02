@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'cms',
         'passwords' => 'users',
     ],
 
@@ -46,6 +46,10 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'cms' => [
+            'driver' => 'session',
+            'provider' => 'cmsusers',
+        ]
     ],
 
     /*
@@ -70,6 +74,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+        'cmsusers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\CMSUsers::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',

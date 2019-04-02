@@ -8,4 +8,14 @@ use App\Http\Controllers\Controller;
 class AdminController extends Controller
 {
     //
+    public function showloginForm()
+    {
+
+        return view('cms.login');
+    }
+
+    public function login(Request $request)
+    {
+        dd($request);
+    }
 }
