@@ -18,4 +18,14 @@ class AdminController extends Controller
     {
         dd($request);
     }
+
+    public function showregisterForm()
+    {
+        return view('cms.register');
+    }
+
+    public function register(Request $request)
+    {
+        dd($request);
+    }
 }

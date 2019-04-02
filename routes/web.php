@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 
 
+Route::get('admin/register', 'Cms\AdminController@showregisterForm')->name('admin.register');
+
+Route::post('admin/register', 'Cms\AdminController@register')->name('admin.registerpost');
+
 Route::get('admin/login', 'Cms\AdminController@showloginForm')->name('admin.login');
 
 Route::post('admin/login', 'Cms\AdminController@login')->name('admin.loginpost');
